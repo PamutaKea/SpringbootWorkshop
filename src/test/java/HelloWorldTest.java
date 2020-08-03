@@ -12,13 +12,13 @@ public class HelloWorldTest {
     @Test
     public void sayHi_with_pamuta_should_return_Hello_Pamuta(){
         HelloWorld h = new HelloWorld();
-        String result = h.sayHiName("pamuta");
+        String result = h.sayHi("pamuta");
         assertEquals("Hello Pamuta",result);
     }
     @Test
     public void sayHi_with_frong_should_return_Hello_Pamuta(){
         HelloWorld h = new HelloWorld();
-        String result = h.sayHiName("frong");
+        String result = h.sayHi("frong");
         assertEquals("Hello Frong",result);
     }
 }
