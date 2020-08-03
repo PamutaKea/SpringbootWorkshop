@@ -18,4 +18,15 @@ public class CircularBufferTest {
         boolean result = cb.isFull();
         assertTrue("Buffer not full",result);
     }
+    @Test
+    public void write_A_B_to_buffer_should_read_A_b_from_buffer(){
+        CircularBuffer cb = new CircularBuffer();
+        cb.writeData("A");
+        cb.writeData("B");
+        assertEquals("A",cb.readData());
+        assertEquals("B",cb.readData());
+//        cb.writeData("A");
+//        String result = cb.readData();
+//        assertEquals("A",result);
+    }
 }
