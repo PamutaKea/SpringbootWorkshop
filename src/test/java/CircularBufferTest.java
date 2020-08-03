@@ -29,4 +29,16 @@ public class CircularBufferTest {
 //        String result = cb.readData();
 //        assertEquals("A",result);
     }
+    @Test
+    public void write_data_should_not_over_buffer_size(){
+        CircularBuffer cb = new CircularBuffer();
+        for (int i = 0; i <= 10; i++) {
+            if(cb.checkSize(i)){
+                cb.writeData("A"+i);
+                assertEquals("A"+i,cb.readData());
+            }
+
+        }
+
+    }
 }
