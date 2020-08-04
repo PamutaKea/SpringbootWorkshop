@@ -32,30 +32,6 @@ public class TennisGame2 {
 
 
         // Normal case
-        if (player1Point > 0 && player2Point ==0 )
-        {
-            if (player1Point ==1)
-                player1Result = textScores[player1Point];
-            if (player1Point ==2)
-                player1Result = textScores[player1Point];
-            if (player1Point ==3)
-                player1Result = textScores[player1Point];
-
-            player2Result = "Love";
-            score = player1Result + "-" + player2Result;
-        }
-        if (player2Point > 0 && player1Point ==0)
-        {
-            if (player2Point ==1)
-                player2Result = textScores[player2Point];
-            if (player2Point ==2)
-                player2Result = textScores[player2Point];
-            if (player2Point ==3)
-                player2Result = textScores[player2Point];
-
-            player1Result = "Love";
-            score = player1Result + "-" + player2Result;
-        }
 
         if (player1Point > player2Point && player1Point < 4)
         {
