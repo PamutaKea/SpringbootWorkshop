@@ -26,8 +26,10 @@ public class TennisGame2 {
 
         //Deuce
         boolean isDeuce = player1Point == player2Point && player1Point >= 3;
-        if (isDeuce)
-            score = "Deuce";
+        if (isDeuce) {
+            return "Deuce";
+        }
+
 
         // Normal case
         if (player1Point > 0 && player2Point ==0)
