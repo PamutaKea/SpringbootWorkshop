@@ -59,27 +59,11 @@ public class TennisGame2 {
 
         if (player1Point > player2Point && player1Point < 4)
         {
-            if (player1Point ==2)
-                player1Result=textScores[2];
-            if (player1Point ==3)
-                player1Result=textScores[3];
-            if (player2Point ==1)
-                player2Result=textScores[1];
-            if (player2Point ==2)
-                player2Result=textScores[2];
-            score = player1Result + "-" + player2Result;
+            score = textScores[player1Point] + "-" + textScores[player2Point];
         }
         if (player2Point > player1Point && player2Point < 4)
         {
-            if (player2Point ==2)
-                player2Result=textScores[2];
-            if (player2Point ==3)
-                player2Result=textScores[3];
-            if (player1Point ==1)
-                player1Result=textScores[1];
-            if (player1Point ==2)
-                player1Result=textScores[2];
-            score = player1Result + "-" + player2Result;
+            score = textScores[player1Point] + "-" + textScores[player2Point];
         }
 
         // Advantage (ได้เปรียบ)
