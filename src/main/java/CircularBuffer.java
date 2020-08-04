@@ -1,6 +1,6 @@
 public class CircularBuffer {
-    private int bufferSize = 10;
-    private String[] buffer;
+    private final int bufferSize;
+    private final String[] buffer;
     private int readPointer;
     private int writePointer;
     private boolean result;
@@ -22,7 +22,6 @@ public class CircularBuffer {
     }
 
     public void writeData(String input) {
-        bufferSize--;
         this.buffer[writePointer++] = input;
     }
 
@@ -34,13 +33,13 @@ public class CircularBuffer {
     public String readData() {
         return this.buffer[readPointer++];
     }
-
+/*
     public boolean checkSize(int size) {
-        if(size <= bufferSize){
+        if (size <= bufferSize){
             result = true;
-        }else if(size > bufferSize){
+        }else if (size > bufferSize){
             result = false;
         }
         return result;
-    }
+    } */
 }
