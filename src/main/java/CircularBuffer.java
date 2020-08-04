@@ -7,10 +7,17 @@ public class CircularBuffer {
 
     // Default constructor
     public CircularBuffer() {
-        this.buffer = new String[10];
+        this(10);
+
+    }
+
+    public CircularBuffer(int size) {
+        this.bufferSize=size;
+        this.buffer = new String[bufferSize];
     }
 
     public boolean isEmpty() {
+
         return bufferSize == 10;
     }
 
