@@ -39,19 +39,6 @@ public class TennisGame2 {
             return "Deuce";
         }
 
-
-        // Normal case
-
-        if (player1Point > player2Point && player1Point < 4)
-        {
-            return textScores[player1Point] + "-" + textScores[player2Point];
-
-        }
-        if (player2Point > player1Point && player2Point < 4)
-        {
-            return textScores[player1Point] + "-" + textScores[player2Point];
-        }
-
         // Advantage (ได้เปรียบ)
         if (player1Point > player2Point && player2Point >= 3)
         {
@@ -64,7 +51,7 @@ public class TennisGame2 {
             return  "Advantage "+player2Name;
         }
 
-
+        // Normal case
         return textScores[player1Point] + "-" + textScores[player2Point];
     }
 
