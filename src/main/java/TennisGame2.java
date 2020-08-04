@@ -15,7 +15,16 @@ public class TennisGame2 {
         String player1Result = "";
         String player2Result = "";
         String score = "";
+        // Winner
+        if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
+        {
+            return  "Win for "+player1Name;
+        }
+        if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
+        {
+            return  "Win for "+player2Name;
 
+        }
         //เสมอกัน
         boolean sameScoreAll = player1Point == player2Point && player1Point < 3;
         if (sameScoreAll)
@@ -55,16 +64,7 @@ public class TennisGame2 {
             return  "Advantage "+player2Name;
         }
 
-        // Winner
-        if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
-        {
-            return  "Win for "+player1Name;
-        }
-        if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
-        {
-            return  "Win for "+player2Name;
 
-        }
         return textScores[player1Point] + "-" + textScores[player2Point];
     }
 
