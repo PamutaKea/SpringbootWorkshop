@@ -11,22 +11,25 @@ public class TennisGame2 {
     }
 
     public String getScore(){
+        String [] textScores = {"Love","Fifteen","Thirty"};
         String player1Result = "";
         String player2Result = "";
         String score = "";
-        if (player1Point == player2Point && player1Point < 4)
+
+        //เสมอกัน
+        boolean sameScoreAll = player1Point == player2Point && player1Point < 3;
+        if (sameScoreAll)
         {
-            if (player1Point ==0)
-                score = "Love";
-            if (player1Point ==1)
-                score = "Fifteen";
-            if (player1Point ==2)
-                score = "Thirty";
+            score = textScores[player1Point];
             score += "-All";
         }
-        if (player1Point == player2Point && player1Point >=3)
+
+        //Deuce
+        boolean isDeuce = player1Point == player2Point && player1Point >= 3;
+        if (isDeuce)
             score = "Deuce";
 
+        // Normal case
         if (player1Point > 0 && player2Point ==0)
         {
             if (player1Point ==1)
@@ -77,6 +80,7 @@ public class TennisGame2 {
             score = player1Result + "-" + player2Result;
         }
 
+        // Advantage (ได้เปรียบ)
         if (player1Point > player2Point && player2Point >= 3)
         {
             score = "Advantage "+ player1Name;
@@ -87,6 +91,7 @@ public class TennisGame2 {
             score = "Advantage "+player2Name;
         }
 
+        // Winner
         if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
         {
             score = "Win for "+player1Name;
