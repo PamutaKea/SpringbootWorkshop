@@ -18,7 +18,7 @@ public class CircularBuffer {
 
     public boolean isEmpty() {
 
-        return bufferSize == 10;
+        return readPointer == writePointer;
     }
 
     public void writeData(String input) {
@@ -27,7 +27,8 @@ public class CircularBuffer {
     }
 
     public boolean isFull() {
-       return bufferSize == 0;
+
+        return writePointer>= bufferSize;
     }
 
     public String readData() {
