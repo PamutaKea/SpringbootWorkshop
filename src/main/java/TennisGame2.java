@@ -35,34 +35,37 @@ public class TennisGame2 {
 
         if (player1Point > player2Point && player1Point < 4)
         {
-            score = textScores[player1Point] + "-" + textScores[player2Point];
+            return textScores[player1Point] + "-" + textScores[player2Point];
+
         }
         if (player2Point > player1Point && player2Point < 4)
         {
-            score = textScores[player1Point] + "-" + textScores[player2Point];
+            return textScores[player1Point] + "-" + textScores[player2Point];
         }
 
         // Advantage (ได้เปรียบ)
         if (player1Point > player2Point && player2Point >= 3)
         {
-            score = "Advantage "+ player1Name;
+            return  "Advantage "+ player1Name;
+
         }
 
         if (player2Point > player1Point && player1Point >= 3)
         {
-            score = "Advantage "+player2Name;
+            return  "Advantage "+player2Name;
         }
 
         // Winner
         if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
         {
-            score = "Win for "+player1Name;
+            return  "Win for "+player1Name;
         }
         if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
         {
-            score = "Win for "+player2Name;
+            return  "Win for "+player2Name;
+
         }
-        return score;
+        return textScores[player1Point] + "-" + textScores[player2Point];
     }
 
     public void p1Score(){
